@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="icons/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .dropdown-icon {
+      font-size: 50px;
+    }
+
+    .dropdown {
+      display: none;
+    }
+    .dropdown-icon:hover ~ .dropdown {
+      display: block;
+      font-size:50px;
+    }
+  </style>
+  <body>
+    <i class="fas fa-bars dropdown-icon"></i>
+    <div class="dropdown">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </div>
+  </body>
+</html>

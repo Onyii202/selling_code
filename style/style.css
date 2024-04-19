@@ -24,13 +24,20 @@ body {
 
 .ul_head {
   display: flex;
-  gap: 2rem;
+  gap:15px;
 }
 
 .ul_head > li > a > i {
   color: black;
   font-size: 25px;
+  
 }
+
+.ul_head > li > a > i:hover {
+  color: #f16821;
+  font-size: 25px;
+}
+
 
 .info {
   display: flex;
@@ -45,6 +52,9 @@ i {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,13 +65,23 @@ header {
 
 .ul_header {
   display: flex;
-  gap: 2rem;
+  gap:2rem;
 }
 
-.ul_header > li > a {
-  font-size: 18px;
-  color: black;
+.ul_head>li{
+  display: inline-block;
+  line-height: 60px;
+  margin: 0 15px;
 }
+
+
+.ul_header > li > a {
+  font-size: 18px;}
+  
+a:hover, a.active{
+  color:#F16821 ;
+}
+
 
 .logo {
   font-size: 40px;
@@ -183,7 +203,6 @@ main > p {
 
 h3 {
   font-size: 20px;
-  /* text-align: center; */
   padding-bottom: 1rem;
 }
 
@@ -212,10 +231,6 @@ p {
   color: #bac5d4;
   padding-bottom: 2rem;
 }
-/* .container div {
-  width: 400px;
-} */
-
 .full_btn {
   display: flex;
   text-align: center;
@@ -234,7 +249,7 @@ p {
   border: 3px solid black;
   background-color: white;
   color: black;
-  padding: 5px 20px;
+  padding: 5px 30px;
   width: fit-content;
   cursor: pointer;
 }
@@ -260,10 +275,10 @@ p {
 }
 
 .full_btn .two:hover {
-  border: 3px solid white;
+  border: 3px solid black;
   background-color: black;
   color: white;
-  padding: 5px 20px;
+  padding: 5px 30px;
   width: fit-content;
   cursor: pointer;
 }
@@ -331,10 +346,6 @@ p {
   cursor: pointer;
 }
 
-/* .sub_2 > p {
-  font-size: 16px;
-} */
-
 .sub_3 > h2 {
   text-align: center;
   font-size: 3rem;
@@ -344,9 +355,6 @@ p {
   background-color: #f8f9fa;
   padding-bottom: 4rem;
 }
-  /* height: 20rem; */
-
-
 .sub_3 > p {
   color: #908090;
   justify-items: center;
@@ -365,15 +373,6 @@ p {
   font-size:40px ;
 
 }
-
-/* .sub_2>h2{
-  text-align: center;
-} */
-
-
-
-
-
 
 .img_0 {
   height: 600px;
@@ -398,7 +397,6 @@ p {
 }
 
 .about-cont > p {
-  /* padding-right: 10rem; */
   line-height: 2rem;
   padding-bottom: 2rem;
   color: black;
@@ -432,8 +430,6 @@ del {
 }
 
 .detail_1 > button:hover {
-  /* width: 400px;
-  height: 40px; */
   padding: 4px 8px;
   background-color: black;
   color: white;
@@ -450,8 +446,6 @@ del {
 
 .detail_2 > button:hover {
   border: 3px solid black;
-  /* width: 150px;
-  /* height: 40px; */
   padding: 4px 8px;
   color: black;
   background-color: white;
@@ -466,11 +460,7 @@ del {
   margin: 0 9%;
 }
 
-/* .about_2 >p{
-  padding-bottom: 2rem; */
-
 .about-prod_2 {
-  /* padding: 4% 3%; */
   display: flex;
   gap: 8rem;
 }
@@ -546,11 +536,8 @@ del {
   display: flex;
   padding: 3% 9%;
   gap: 6rem;
-  /* margin-bottom: 2rem; */
+  
 }
-
-
-
 .peg_1{
   height: 300px;
   width: 300px;
@@ -781,7 +768,6 @@ article {
 }
 
 .full_class>.class_5{
-  /* padding:0 2%; */
   padding-right: 10%;
 }
 .full_class>.class_6{
@@ -810,7 +796,6 @@ article {
 }
 
 .go>.get_1{
-  /* padding: 0 2%; */
   padding-right: 10%;
 }
 
@@ -1014,10 +999,7 @@ article {
 .fit{
   display: flex;
   justify-content: center;
-  padding: 6% 30%;
-  /* width: 100%; */
-  
-  
+  padding: 6% 30%; 
 }
 
 .all_form{
@@ -1084,8 +1066,6 @@ article {
 
 
 
-
-
 .iconss{
   display: flex;
   gap: 2rem;
@@ -1133,8 +1113,6 @@ article {
 
 }
 
-
-
 .cart:hover{
   background-color: white;
   color:black;
@@ -1151,16 +1129,26 @@ article {
   padding-top: 6rem;
   
 }
+label #checkbtn,
+label #cancel{
+  color:black;
+  font-size: 25px;
+  float: right;
+  line-height:80px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+
 
 @media only screen and (max-width: 400px){
-  /* body{
-    padding:;
-  } */
   .sec_1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* white-space: nowrap; */
   }
 
   .sec_1 > main > p {
@@ -1180,10 +1168,11 @@ article {
   color: #ffff;
   font-size: 14px;
   cursor: pointer;
+  width: 100%;
   /* height: 35px; */
 }
 .btn {
-  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 .btn_2 {
@@ -1212,9 +1201,7 @@ main > p {
  
 }
  .full_btn {
-  display: flex;
   text-align: center;
-  /* justify-content: space-around; */
   max-width: 350px;
   padding-bottom: 3rem;
   justify-content: center;
@@ -1260,7 +1247,6 @@ main > p {
 .about-prod {
   background-color: #ffff;
   padding: 4% 2%;
-  /* display: flex; */
   gap: 8rem;
   flex-direction: column;
 }
@@ -1278,7 +1264,6 @@ main > p {
   text-align: center;
 }
 .about-cont > p {
-  /* padding-right: 10rem; */
   line-height: 2rem;
   padding-bottom: 2rem;
   color: black;
@@ -1290,14 +1275,12 @@ main > p {
   padding: 0 4%;
 }
 .delt {
-  /* display: flex; */
   gap: 1rem;
   padding-bottom: 2rem;
   padding: 0 2%;
 }
 .about_2 {
   padding: 6% 4%;
-  /* display: flex; */
   background-color: #ffff;
   gap: 4rem;
   margin: 0 2%;
@@ -1310,14 +1293,12 @@ main > p {
 }
 .img_11 {
   padding-top: 4rem;
-  /* display: flex; */
   background-color: #ffff;
   margin-top: 4rem;
   flex-direction: column;
 }
 .img_12 {
   padding: 0 4%;
-  /* margin: 0 2%; */
 }
 .img_s {
   height: 400px;
@@ -1336,12 +1317,10 @@ main > p {
 
 }
 .peg{
-  /* display: flex; */
   padding: 3% 9%;
   gap: 6rem;
   flex-direction: column;
-  /* margin-top: 2rem; */
-  /* padding-top: 2rem; */
+  
 }
 .div_1>button{
   border: 3px solid black;
@@ -1357,9 +1336,7 @@ main > p {
   padding: 0 4%;
 }
 .full{
-  /* display: flex; */
   gap:5px;
-  /* justify-content: center; */
   padding-bottom: 4rem;
   padding-top: 4rem;
   padding: 0 2%;
@@ -1415,128 +1392,107 @@ main > p {
  flex-direction: column;
   justify-content:space-between;
   padding: 2% 4%;
-  /* gap: 20%; */
+
 }
 .feat{
   padding-top: 2rem;
 }
+.box {
+  height: 400px;
+  width: 100%;
+  padding: 0 4%;
+  padding-bottom: 2rem;
+}
+.para > p {
+  font-size: 14px;
+  text-align: center;
+  padding: 0 2%;
+}
+  label #checkbtn{
+  display: block;
 }
 
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-
-  
-
-
-
-
- 
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .main_2> i{
-  font-size:35px;
-  /* padding-top: 4rem; */
-
-
-/* .main_3{
-  padding-left: 5%;
-} */ 
-
-
-
- 
-
-  
- 
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-/* .peg_2{
-  height: 300px;
-  width: 300px; */
-
-
-/* .peg_3{
-  height: 300px;
-  width: 300px; */
-
-
-/* .fa_1> i{
-  color: #e9ecef ;
+.ul_header {
+  display:block;
+  background: white;
+  width:70%;
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  padding: 0 6%;
+  left: -100%;
+  transition: all 0.5s;
+  /* margin: 2% 9%; */
+
+}
+.ul_header>li>a{
+  font-size: 20px;
 }
 
-.fa_1> i:hover{
-  color: #f16821;
+.ul_header>li{
+  line-height:80px;
+  display: block;
+}
+a:hover, a.active{
+  color:#F16821 ;
   cursor: pointer;
-} */
-/* .star{
-  color: hsl(36, 94%, 52%);
 }
-span{
-  stop-color: #F89D13;
-} */
+label #cancel{
+  display:none;
+}
+#check:checked ~ .ul_header{
+  left: 0;
+}
+#check:checked ~ label #checkbtn{
+  display: none;
+
+}
+ #check:checked ~ label #cancel{
+  display: block;
+ }
+ .bull{
+  display: none;
+ }
+ .nav_head {
+  background-color: #f8f9fa;
+  width: 100%;
+  padding: 0 2%;
+  height: 80px;
+}
+
+.ul_head {
+  display: flex;
+  gap:0;
+  
+}
+.ul_head > li > a > i {
+  color: black;
+  font-size: 23px;
+}
+.ul_head>li{
+  display: inline-block;
+  line-height: 60px;
+  margin: 0 6%;
+}
+i {
+  font-size: 15px;
+}
+.info {
+  display: flex;
+  gap: 10px;
+}
+
+
+
+  
+  
+
+ 
+
+
+
+ 
+}
+
+
+
